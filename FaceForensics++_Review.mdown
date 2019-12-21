@@ -97,7 +97,7 @@ This paper makes the following contributions:
     network to output prediction.
 
 > ![Automatic
-> Forgery.JPG](C:\Users\Shatadru Majumdar\Desktop\Papers\Capture){width="4.613636264216973in"
+> Forgery.JPG](C:\Users\Shatadru Majumdar\Desktop\Papers\Capture.JPG){width="4.613636264216973in"
 > height="1.0499015748031495in"}
 >
 > They applied the following classification netwiorks:

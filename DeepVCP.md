@@ -1,8 +1,10 @@
 # DeepVCP: An End-to-End Deep Neural Network for Point Cloud Registration
 
-<center><a href="http://www.youtube.com/watch?feature=player_embedded&v=O9AMulNyrzY
+<p align="center">
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=O9AMulNyrzY
 " target="_blank"><img src="http://img.youtube.com/vi/O9AMulNyrzY/0.jpg" 
-alt="Youtube Video" width="427" height="240" border="10" /></a></center>
+alt="Youtube Video" width="427" height="240" border="10" /></a>
+</p>
 
 **DeepVCP**(Virtual Corresponding Points) is an end-to-end learning-based 3D point cloud registration framework that achieves comparable registration accuracy to prior state-of-the-art geometric methods of aligning two different point clouds.
 
@@ -16,7 +18,9 @@ Instead of implementing other keypoint based methods where a [RANSAC](https://en
 
 * [KITTI](http://www.cvlibs.net/datasets/kitti/raw_data.php) & [Apollo-SouthBay](http://data.apollo.auto/?locale=en-us&lang=en) datasets are used to validate it's efficiency.
 
-<center><img src="images/DeepVCP_viz.png" alt="DeepVCP Visualization"></center>
+<p align="center">
+<img src="images/DeepVCP_viz.png" alt="DeepVCP Visualization">
+</p>
 
 Results demonstrate that it achieves comparable registration accuracy and runtime efficiency compared to state-of-the-art geometry-based methods, but with higher robustness to inaccurate initial poses.
 

@@ -26,6 +26,12 @@ This paper deals with the study of a general re-inforcement learning based frame
 
 The above model namely **GDSA**(Goal Driven Sequence Abstraction) is driven by a goal-function rather than needing expensively annotated ground-truth labels, and also uniquely allows selection of the information to be preserved rather than producing a single general-purpose summary. It provides improved performance for abstraction compared to several alternatives.
 
+## GDSA v/s other Models
+
+* Existing abstraction models are either supervised or unsupervised, whereas GDSA accepts a data sequence and outputs a shorter sequence which retains a specific type of information according to a goal function.
+
+* In conventional reinforcement learning framework, the observation and action space dimensions are fixed and the number of atomic units increases over time keeping their embedding dimensions fixed, but in case of GDSA, the number of atomic units is decremented at each step, hence action space shrinks overtime and is rebuilt at every time-step.
+
 Reduced data requirements and new goal-conditional abstraction ability enables unique practical summarization applications.
 
 Tensorflow implementation of **GDSA** for Sketch Abstraction can be found [here](https://github.com/UmarSpa/SketchAbstraction).

@@ -1,4 +1,4 @@
-# SANet: Review of the Papper : Scene Agnostic Network for Camera Localization
+# Review of the Papper - SANet: Scene Agnostic Network for Camera Localization
 This paper presents a scene agnostic neural architecture for camera localization, where model parameters and scenes are independent from each other.
 
 by Rajatava Mukherjee

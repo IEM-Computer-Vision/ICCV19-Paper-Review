@@ -1,14 +1,5 @@
 # Jointly Aligning Millions of Images With Deep Penalised Reconstruction Congealing
 
-<style>
-.left{}
-    float: left;
-}
-.right{}
-    float: right;
-}
-</style>
-
 <p align = "center">
 <img src="images/RenconsCongeal_algo.png" width="500" />
 </p>

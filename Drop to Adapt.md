@@ -22,9 +22,7 @@ In this paper, unsupervised domain adaptation id dealt with domain adversarial t
   - *Task-specific objective*, L<sub>T</sub>(S) = - E<sub>x<sub>s</sub>, y<sub>s</sub><sub> ~ S</sub></sub>[y<sub>s</sub> <sup>T</sup> log h(x <sub>s</sub>)], where y<sub>s</sub> is one-hot encoded vector of y<sub>s</sub>.
 
   - *Domain adaptation objective*, L<sub>DTA</sub>(T) = L<sub>fDTA</sub>(T) + L<sub>cDTA</sub>(T), 
-  
-  		where L<sub>fDTA</sub>(T) = E<sub>x<sub>s</sub> ~ T </sub> [D<sub>KL</sub>[h(x<sub>t</sub>; m<sup>s</sup><sub>f</sub> ), ||h(x<sub>t</sub>; m<sup>adv</sup><sub>f</sub>)||], 
-  		
+  where L<sub>fDTA</sub>(T) = E<sub>x<sub>s</sub> ~ T </sub> [D<sub>KL</sub>[h(x<sub>t</sub>; m<sup>s</sup><sub>f</sub> ), ||h(x<sub>t</sub>; m<sup>adv</sup><sub>f</sub>)||], 
   		and L<sub>cDTA</sub>(T) = E<sub>x<sub>s</sub> ~ T </sub> [D<sub>KL</sub>[h(x<sub>t</sub>; m<sup>s</sup><sub>c</sub> ), ||h(x<sub>t</sub>; m<sup>adv</sup><sub>c</sub>)||]
   
   - *Entropy minimization objective*, L<sub>E</sub>(T) = - E<sub>x<sub>t</sub><sub> ~ S</sub></sub>[h(x <sub>t</sub>) <sup>T</sup> log h(x <sub>t</sub>)]

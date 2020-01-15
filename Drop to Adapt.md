@@ -8,26 +8,26 @@ In this paper, unsupervised domain adaptation id dealt with domain adversarial t
 
 ## Proposed Method
 
-- **Unsupervised Domain Adaptation** - Two distinctive domains : source S= {X<sub>s</sub>, Y<sub>s</sub>} and target domain T = {X<sub>t</sub>} where a feature extractor f(x;m<sub>f</sub>) takes a datapoint from two domains and creates a latent vector which is fed into a classifier c(.; m<sub>c</sub>). h(x; m<sub>f</sub>, m <sub>c</sub> ) = c(f (x; m<sub>f</sub> ); m<sub>c</sub> )
+- **Unsupervised Domain Adaptation** - Two distinctive domains : source S= {X^s^, Y^s^} and target domain T = {X^t^} where a feature extractor f(x;m^f^) takes a datapoint from two domains and creates a latent vector which is fed into a classifier c(.; m^c^). h(x; m^f^, m ^c^ ) = c(f (x; m^f^ ); m^c^ )
 - **Adversarial Dropout** - Virtual Adversarial Dropout is used which maximize the divergence between two in-
-  dependent predictions to an input. The network h is decomposed into h<sub>l</sub> and h<sub>u</sub> by dropout m : h(x; m) = h<sub>u</sub> (m ⊙ h<sub>l</sub> (x)). The divergence between two distributions p and p' is D[p, p']≥ 0.
+  dependent predictions to an input. The network h is decomposed into h^l^ and h^u^ by dropout m : h(x; m) = h^u^ (m ⊙ h^l^ (x)). The divergence between two distributions p and p' is D[p, p']≥ 0.
 
-  - **Element wise** - The element-wise adv. dropout(EAdD) mask m<sup>adv</sup> is defined with respect to a schocastic dropout mask m<sup>s</sup> as : m<sup>adv</sup> = argmax<sub>m</sub> D [h(x; m<sup>s</sup> ), h(x; m)] where &#124;&#124;m<sup>s</sup> − m&#124;&#124; ≤ δ<sub>e</sub>L.
+  - **Element wise** - The element-wise adv. dropout(EAdD) mask m<sup>adv</sup> is defined with respect to a schocastic dropout mask m<sup>s</sup> as : m<sup>adv</sup> = argmax^m^ D [h(x; m<sup>s</sup> ), h(x; m)] where &#124;&#124;m<sup>s</sup> − m&#124;&#124; ≤ δ^e^L.
 
-  - **Channel wise** - The channel adversarial droupout mask is defined as m<sup>adv</sup> = argmax<sub>m</sub> D [h(x; m<sup>s</sup> ), h(x; m)], where 1/HW ∑ &#124;&#124;m<sup>s</sup>(i) − m(i)&#124;&#124; ≤ δ<sub>c</sub> C and h<sub>l</sub>(x) ∈ R<sup>C×H×W</sup>, where C, H, and W denote the channel, height,
+  - **Channel wise** - The channel adversarial droupout mask is defined as m<sup>adv</sup> = argmax^m^ D [h(x; m<sup>s</sup> ), h(x; m)], where 1/HW ∑ &#124;&#124;m<sup>s</sup>(i) − m(i)&#124;&#124; ≤ δ^c^ C and h^l^(x) ∈ R<sup>C×H×W</sup>, where C, H, and W denote the channel, height,
     and width dimensions of the activation, respectively.
 
 - **Drop to Adapt** - The overall loss function is sum of the objectives for task-specific, domain adaptation, entropy minimization and Virtual Adversarial Training(VAT).
 
-  - _Task-specific objective_, L<sub>T</sub>(S) = - E<sub>x<sub>s</sub>, y<sub>s</sub><sub> ~ S</sub></sub>[y<sub>s</sub> <sup>T</sup> log h(x <sub>s</sub>)], where y<sub>s</sub> is one-hot encoded vector of y<sub>s</sub>.
+  - _Task-specific objective_, L^T^(S) = - E^x^s^, y^s^^ ~ S^^[y^s^ <sup>T</sup> log h(x ^s^)], where y^s^ is one-hot encoded vector of y^s^.
 
-  - _Domain adaptation objective_, L<sub>DTA</sub>(T) = L<sub>fDTA</sub>(T) + L<sub>cDTA</sub>(T),
-    where L<sub>fDTA</sub>(T) = E<sub>x<sub>s</sub> ~ T </sub> [D<sub>KL</sub>[h(x<sub>t</sub>; m<sup>s</sup><sub>f</sub> ), &#124;&#124;h(x<sub>t</sub>; m<sup>adv</sup><sub>f</sub>)&#124;&#124;],
-    and L<sub>cDTA</sub>(T) = E<sub>x<sub>s</sub> ~ T </sub> [D<sub>KL</sub>[h(x<sub>t</sub>; m<sup>s</sup><sub>c</sub> ), &#124;&#124;h(x<sub>t</sub>; m<sup>adv</sup><sub>c</sub>)&#124;&#124;]
+  - _Domain adaptation objective_, L^DTA^(T) = L^fDTA^(T) + L^cDTA^(T),
+    where L^fDTA^(T) = E^x^s^ ~ T ^ [D^KL^[h(x^t^; m<sup>s</sup>^f^ ), &#124;&#124;h(x^t^; m<sup>adv</sup>^f^)&#124;&#124;],
+    and L^cDTA^(T) = E^x^s^ ~ T ^ [D^KL^[h(x^t^; m<sup>s</sup>^c^ ), &#124;&#124;h(x^t^; m<sup>adv</sup>^c^)&#124;&#124;]
 
-  - _Entropy minimization objective_, L<sub>E</sub>(T) = - E<sub>x<sub>t</sub><sub> ~ S</sub></sub>[h(x <sub>t</sub>) <sup>T</sup> log h(x <sub>t</sub>)]
+  - _Entropy minimization objective_, L^E^(T) = - E^x^t^^ ~ S^^[h(x ^t^) <sup>T</sup> log h(x ^t^)]
 
-  - _VAT objective_, L<sub>V</sub>(T) = E<sub>x<sub>t</sub> ~ T </sub> [max<sub>&#124;&#124;r&#124;&#124; ≤ ∈ </sub> D<sub>KL</sub>[h(x<sub>t</sub>), &#124;&#124;h(x<sub>t</sub> + r)&#124;&#124;]
+  - _VAT objective_, L^V^(T) = E^x^t^ ~ T ^ [max^&#124;&#124;r&#124;&#124; ≤ ∈ ^ D^KL^[h(x^t^), &#124;&#124;h(x^t^ + r)&#124;&#124;]
 
 ## Experiment Result
 

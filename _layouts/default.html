@@ -26,7 +26,9 @@
     	<nav class="inner">
         <ul>
           {% for item in site.data.pages %}
-          <a href="{{site.baseurl}}/{{item.url}}">{{item.title}}</a>
+          <li>
+            <a href="{{site.baseurl}}/{{item.url}}">{{item.title}}</a>
+          </li>
           {% endfor %}
         </ul>
     	</nav>

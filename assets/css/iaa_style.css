@@ -2,18 +2,18 @@
   height: 40px;
 }
 
-#navbar_wrap ul {
+#navbar_wrap nav ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-#navbar_wrap ul li {
+#navbar_wrap nav ul li {
   height: 40px;
   display: inline-block;
 }
 
-#navbar_wrap ul li a {
+#navbar_wrap nav ul li a {
   display: inline-block;
   padding: 0.5em;
   text-decoration: none;
@@ -21,7 +21,7 @@
   text-transform: uppercase;
 }
 
-#navbar_wrap ul li a:hover {
+#navbar_wrap nav ul li a:hover {
   background-color: #111;
 }
 /*# sourceMappingURL=iaa_style.css.map */

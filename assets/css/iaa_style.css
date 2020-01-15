@@ -1,6 +1,21 @@
-#navbar-wrap a {
+#navbar_wrap ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#navbar_wrap ul li {
+  display: inline;
+}
+
+#navbar_wrap ul li a {
   display: inline-block;
-  width: 100px;
+  padding: 0.5em;
   text-decoration: none;
   color: white;
 }
+
+#navbar_wrap ul li a:hover {
+  background-color: #111;
+}
+/*# sourceMappingURL=iaa_style.css.map */

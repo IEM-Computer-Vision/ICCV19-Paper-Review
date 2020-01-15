@@ -1,0 +1,19 @@
+#navbar_wrap {
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    li {
+      display: inline;
+      a {
+        display: inline-block;
+        padding: 0.5em;
+        text-decoration: none;
+        color: white;
+        &:hover {
+          background-color: #111;
+        }
+      }
+    }
+  }
+}

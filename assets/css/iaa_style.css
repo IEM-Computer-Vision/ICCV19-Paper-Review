@@ -1,11 +1,13 @@
 #navbar_wrap ul {
+  height: 40px;
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
 #navbar_wrap ul li {
-  display: inline;
+  height: 40px;
+  display: inline-block;
 }
 
 #navbar_wrap ul li a {
@@ -13,6 +15,7 @@
   padding: 0.5em;
   text-decoration: none;
   color: white;
+  text-transform: uppercase;
 }
 
 #navbar_wrap ul li a:hover {

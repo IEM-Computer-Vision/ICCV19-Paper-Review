@@ -1,0 +1,8 @@
+- title: home
+  url: ''
+
+- title: about
+  url: pages/about
+
+- title: contact
+  url: pages/contact

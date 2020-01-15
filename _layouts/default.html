@@ -25,7 +25,7 @@
     <div class="outer" id="navbar_wrap">
     	<nav class="inner">
         <ul>
-          {% for item in site.data.pages.list %}
+          {% for item in site.data.pages %}
           <a href="{{site.baseurl}}/{{item.url}}">{{item.title}}</a>
           {% endfor %}
         </ul>

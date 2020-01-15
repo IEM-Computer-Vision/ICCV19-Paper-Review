@@ -21,7 +21,7 @@
   text-transform: uppercase;
 }
 
-#navbar_wrap nav ul li a:hover {
+#navbar_wrap nav ul li:hover {
   background-color: #111;
 }
 /*# sourceMappingURL=iaa_style.css.map */

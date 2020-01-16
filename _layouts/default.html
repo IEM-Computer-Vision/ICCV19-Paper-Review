@@ -12,27 +12,12 @@
   </head>
 
   <body>
-
     <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <h1 id="project_title">{{ site.title | default: site.github.repository_name }}</h1>
-          <h2 id="project_tagline">{{ site.description | default: site.github.project_tagline }}</h2>
-        </header>
-    </div>
+    {% include header.html %}
+    
 
     <!-- NAVBAR -->
-    <div class="outer" id="navbar_wrap">
-    	<nav class="inner">
-        <ul>
-          {% for item in site.data.pages %}
-          <li>
-            <a href="{{site.baseurl}}/{{item.url}}">{{item.title}}</a>
-          </li>
-          {% endfor %}
-        </ul>
-    	</nav>
-    </div>
+    {% include navbar.html %}
 
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
@@ -40,16 +25,8 @@
         {{ content }}
       </section>
     </div>
-
     <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        {% if site.github.is_project_page %}
-        <p class="copyright">{{ site.title | default: site.github.repository_name }} maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
-        {% endif %}
-        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
+    {% include footer.html %}
 
     {% if site.google_analytics %}
       <script>

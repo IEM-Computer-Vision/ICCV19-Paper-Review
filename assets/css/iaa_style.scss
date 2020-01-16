@@ -1,0 +1,24 @@
+#navbar_wrap {
+  nav {
+    height: 40px;
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      li {
+        height: 40px;
+        display: inline-block;
+        a {
+          display: inline-block;
+          padding: 0.5em;
+          text-decoration: none;
+          color: white;
+          text-transform: uppercase;
+        }
+        &:hover {
+          background-color: #111;
+        }
+      }
+    }
+  }
+}

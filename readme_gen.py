@@ -5,7 +5,7 @@ import re
 paper_url = "http://openaccess.thecvf.com/ICCV2019.py"
 domain = "http://openaccess.thecvf.com/"
 
-review_domain = "https://iem-computer-vision.github.io/ICCV19-Paper-Review/"
+review_domain = "https://{{ site.github.owner_name }}.github.io/ICCV19-Paper-Review/"
 
 paper_data = {} # {'title' : 'pdf link'}
 

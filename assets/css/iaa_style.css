@@ -1,0 +1,27 @@
+#navbar_wrap nav {
+  height: 40px;
+}
+
+#navbar_wrap nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#navbar_wrap nav ul li {
+  height: 40px;
+  display: inline-block;
+}
+
+#navbar_wrap nav ul li a {
+  display: inline-block;
+  padding: 0.5em;
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+}
+
+#navbar_wrap nav ul li:hover {
+  background-color: #111;
+}
+/*# sourceMappingURL=iaa_style.css.map */

@@ -20,7 +20,7 @@ Here we are going to use this for first image recounstruction and then for 3D sh
 In this several methods can be  used like  Filtered Back Projection (FBP), TV prior,Iterative BM3D. But the deep prior produces reconstructions with significantly better SSIM values and comparable or better PSNR values.The relatively poor performance of BM3D may be because the aliasing noise in CT reconstructions tends to be more structured and less like natural image noise when compared to the noise observed in image denoising applications. 
 
 <p align = "center">
-<img src="https://github.com/himanshuraj001/demo/blob/master/Untitled%201.png"/>
+<img src="https://github.com/IEM-Computer-Vision/ICCV19-Paper-Review/blob/master/images/Untitled%201.png"/>
 </p>
 
 ### 3D Recontruction :
@@ -29,11 +29,11 @@ is then passed to the projection operator Silhouette Projection (TS) along with 
 
 
 <p align = "center">
-<img src="https://github.com/himanshuraj001/numerical_method-project-c-/blob/master/Untitled.png" />
+<img src="https://github.com/IEM-Computer-Vision/ICCV19-Paper-Review/blob/master/images/Untitled.png" />
 </p>
 
 * Shape-from-Depth Images 3D Reconstruction : It is same as above but here we are using Depth Image Projection (TD) inplace of Silhouette Projection (TS). In this reconstruction ability depends on gussian noise as well as number of views avaliable.
 
 <p align = "center">
-<img src="https://github.com/himanshuraj001/demo/blob/master/Untitled.png" />
+<img src="https://github.com/IEM-Computer-Vision/ICCV19-Paper-Review/blob/master/images/Untitled1.png" />
 </p>

@@ -39,7 +39,7 @@ points in the reference and target images, respectively. The correspondence loss
 we minimize L=Lcorr+Lclass.
 
 <p align = "center">
-<img src="https://iem-computer-vision.github.io/ICCV19-Paper-Review/images/unt1.png" />
+<img src="/images/unt1.png" />
 </p>
 
 ### Segmantic Visual Localization using FSN:
@@ -62,7 +62,7 @@ these sources are combined in a particle filter to sequentially estimate the pos
 ### Evaluation measures:
 We are doing evalution based on this table: 
 <p align = "center">
-<img src="https://iem-computer-vision.github.io/ICCV19-Paper-Review/images/Unt2.png" />
+<img src="./images/Unt2.png" />
 </p>
 
 * Impact of the number of clusters:  The experiments clearly show that SSMC benefits from using fine-grained segmentations, even though

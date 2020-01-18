@@ -8,7 +8,7 @@ In this paper, unsupervised domain adaptation id dealt with domain adversarial t
 
 ## Proposed Method
 
-- **Unsupervised Domain Adaptation** - Two distinctive domains : source <img src="https://latex.codecogs.com/svg.latex?S&space;=&space;\{X_s,&space;Y_s\}"> and target domain T = {X<sub>t</sub>} where a feature extractor f(x;m<sub>f</sub>) takes a datapoint from two domains and creates a latent vector which is fed into a classifier c(.; m<sub>c</sub>). h(x; m<sub>f</sub>, m <sub>c</sub> ) = c(f (x; m<sub>f</sub> ); m<sub>c</sub> )
+- **Unsupervised Domain Adaptation** - Two distinctive domains : source <img src="https://latex.codecogs.com/svg.latex?S&space;=&space;\{X_s,&space;Y_s\}" class="eqn-slate"> and target domain T = {X<sub>t</sub>} where a feature extractor f(x;m<sub>f</sub>) takes a datapoint from two domains and creates a latent vector which is fed into a classifier c(.; m<sub>c</sub>). h(x; m<sub>f</sub>, m <sub>c</sub> ) = c(f (x; m<sub>f</sub> ); m<sub>c</sub> )
 - **Adversarial Dropout** - Virtual Adversarial Dropout is used which maximize the divergence between two in-
   dependent predictions to an input. The network h is decomposed into h<sub>l</sub> and h<sub>u</sub> by dropout m : h(x;m)=h_u (m⊙ h_l (x)). The divergence between two distributions p and p' is D[p, p']≥ 0.
 

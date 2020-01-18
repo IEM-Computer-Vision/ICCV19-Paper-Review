@@ -8,13 +8,13 @@ In this paper, unsupervised domain adaptation id dealt with domain adversarial t
 
 ## Proposed Method
 
-- **Unsupervised Domain Adaptation** - Two distinctive domains : source <img src="https://latex.codecogs.com/svg.latex?S&space;=&space;\{X_s,&space;Y_s\}" class="eqn-inline"> and target domain <img src="https://latex.codecogs.com/svg.latex?T&space;=&space;\{X_t\}" class="eqn-inline"> where a feature extractor <img src="https://latex.codecogs.com/svg.latex?f(x;&space;m_f)" class="eqn-inline"> takes a datapoint from two domains and creates a latent vector which is fed into a classifier <img src="https://latex.codecogs.com/svg.latex?c(.;&space;m_c)" class="eqn-inline">. 
+- **Unsupervised Domain Adaptation** - Two distinctive domains : source <img class="eqn-inline" src="https://latex.codecogs.com/svg.latex?S&space;=&space;\{X_s,&space;Y_s\}"> and target domain <img class="eqn-inline" src="https://latex.codecogs.com/svg.latex?T&space;=&space;\{X_t\}"> where a feature extractor <img class="eqn-inline" src="https://latex.codecogs.com/svg.latex?f(x;&space;m_f)"> takes a datapoint from two domains and creates a latent vector which is fed into a classifier <img src="https://latex.codecogs.com/svg.latex?c(.;&space;m_c)" class="eqn-inline">. 
 <div align="center">
-<img src="https://latex.codecogs.com/svg.latex?h(x;&space;m_f,&space;m_c)&space;=&space;c(f(x;&space;m_f);&space;m_c)" class="eqn-outline">
+<img  class="eqn-outline" src="https://latex.codecogs.com/svg.latex?h(x;&space;m_f,&space;m_c)&space;=&space;c(f(x;&space;m_f);&space;m_c)">
 </div>
 
 - **Adversarial Dropout** - Virtual Adversarial Dropout is used which maximize the divergence between two in-
-  dependent predictions to an input. The network h is decomposed into h<sub>l</sub> and h<sub>u</sub> by dropout m : <img src="https://latex.codecogs.com/svg.latex?h(x;m)=h_u&space;(m&space;\odot&space;h_l&space;(x))" class="eqn-inline">. The divergence between two distributions p and p' is D[p, p']≥ 0.
+  dependent predictions to an input. The network h is decomposed into <img class="eqn-inline" src="https://latex.codecogs.com/svg.latex?h_l"> and <img class="eqn-inline" src="https://latex.codecogs.com/svg.latex?h_u"> by dropout m : <img src="https://latex.codecogs.com/svg.latex?h(x;m)=h_u&space;(m&space;\odot&space;h_l&space;(x))" class="eqn-inline">. The divergence between two distributions p and p' is D[p, p']≥ 0.
 
   - **Element wise** - The element-wise adv. dropout(EAdD) mask m<sup>adv</sup> <img class="eqn-inline" src="https://latex.codecogs.com/svg.latex?m^{adv}"> is defined with respect to a schocastic dropout mask <img class="eqn-inline" src="https://latex.codecogs.com/svg.latex?m^s"> as : <img class="eqn-inline" src="https://latex.codecogs.com/svg.latex?m^{adv}&space;=&space;argmax_m\&space;D[h(x;&space;m^s),&space;h(x;&space;m)]"> where <img class="eqn-inline" src="https://latex.codecogs.com/svg.latex?||m^s&space;-&space;m||\leq&space;\delta_eL">.
 

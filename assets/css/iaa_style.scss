@@ -28,10 +28,22 @@
   box-shadow: none !important;
   margin: 5px 0px 0px !important;
   border: none !important;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  -o-box-shadow: none !important;
+  -ms-box-shadow: none !important;
 }
 
 .eqn-outline.img {
   box-shadow: none !important;
   margin: 5px auto 0px !important;
   border: none !important;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  -o-box-shadow: none !important;
+  -ms-box-shadow: none !important;
+}
+
+#main-content.inner {
+  max-width: 900px;
 }

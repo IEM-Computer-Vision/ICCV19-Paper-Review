@@ -8,15 +8,11 @@ In this paper, unsupervised domain adaptation id dealt with domain adversarial t
 
 ## Proposed Method
 
-<<<<<<< HEAD
 - **Unsupervised Domain Adaptation** - Two distinctive domains : source <img src="https://latex.codecogs.com/svg.latex?S&space;=&space;\{X_s,&space;Y_s\}" class="eqn-inline"> and target domain <img src="https://latex.codecogs.com/svg.latex?T&space;=&space;\{X_t\}" class="eqn-inline"> where a feature extractor <img src="https://latex.codecogs.com/svg.latex?f(x;&space;m_f)" class="eqn-inline"> takes a datapoint from two domains and creates a latent vector which is fed into a classifier <img src="https://latex.codecogs.com/svg.latex?c(.;&space;m_c)" class="eqn-inline">. 
-
+<div align="center">
 <img src="https://latex.codecogs.com/svg.latex?h(x;&space;m_f,&space;m_c)&space;=&space;c(f(x;&space;m_f);&space;m_c)" class="eqn-outline">
+</div>
 
-
-=======
-- **Unsupervised Domain Adaptation** - Two distinctive domains : source <img src="https://latex.codecogs.com/svg.latex?S&space;=&space;\{X_s,&space;Y_s\}" class="eqn-slate"> and target domain T = {X<sub>t</sub>} where a feature extractor f(x;m<sub>f</sub>) takes a datapoint from two domains and creates a latent vector which is fed into a classifier c(.; m<sub>c</sub>). h(x; m<sub>f</sub>, m <sub>c</sub> ) = c(f (x; m<sub>f</sub> ); m<sub>c</sub> )
->>>>>>> 1da111918495da1edd87f670e3773d612ef102d2
 - **Adversarial Dropout** - Virtual Adversarial Dropout is used which maximize the divergence between two in-
   dependent predictions to an input. The network h is decomposed into h<sub>l</sub> and h<sub>u</sub> by dropout m : <img src="https://latex.codecogs.com/svg.latex?h(x;m)=h_u&space;(m&space;\odot&space;h_l&space;(x))" class="eqn-inline">. The divergence between two distributions p and p' is D[p, p']≥ 0.
 

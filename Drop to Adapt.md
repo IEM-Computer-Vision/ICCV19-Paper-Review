@@ -10,7 +10,7 @@ In this paper, unsupervised domain adaptation id dealt with domain adversarial t
 
 - **Unsupervised Domain Adaptation** - Two distinctive domains : source S= {X<sub>s</sub>, Y<sub>s</sub>} and target domain T = {X<sub>t</sub>} where a feature extractor f(x;m<sub>f</sub>) takes a datapoint from two domains and creates a latent vector which is fed into a classifier c(.; m<sub>c</sub>). h(x; m<sub>f</sub>, m <sub>c</sub> ) = c(f (x; m<sub>f</sub> ); m<sub>c</sub> )
 - **Adversarial Dropout** - Virtual Adversarial Dropout is used which maximize the divergence between two in-
-  dependent predictions to an input. The network h is decomposed into h<sub>l</sub> and h<sub>u</sub> by dropout m : h(x; m) = h<sub>u</sub> (m ⊙ h<sub>l</sub> (x)). The divergence between two distributions p and p' is D[p, p']≥ 0.
+  dependent predictions to an input. The network h is decomposed into h<sub>l</sub> and h<sub>u</sub> by dropout m : h(x;m)=h_u (m⊙ h_l (x)). The divergence between two distributions p and p' is D[p, p']≥ 0.
 
   - **Element wise** - The element-wise adv. dropout(EAdD) mask m<sup>adv</sup> is defined with respect to a schocastic dropout mask m<sup>s</sup> as : m<sup>adv</sup> = argmax<sub>m</sub> D [h(x; m<sup>s</sup> ), h(x; m)] where &#124;&#124;m<sup>s</sup> − m&#124;&#124; ≤ δ<sub>e</sub>L.
 

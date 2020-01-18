@@ -39,7 +39,7 @@ points in the reference and target images, respectively. The correspondence loss
 we minimize L=Lcorr+Lclass.
 
 <p align = "center">
-<img src="/images/unt1.png" />
+<img src="./images/unt1.png" />
 </p>
 
 ### Segmantic Visual Localization using FSN:

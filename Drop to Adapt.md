@@ -8,26 +8,27 @@ In this paper, unsupervised domain adaptation id dealt with domain adversarial t
 
 ## Proposed Method
 
-- **Unsupervised Domain Adaptation** - Two distinctive domains : source S= {X<sub>s</sub>, Y<sub>s</sub>} and target domain T = {X<sub>t</sub>} where a feature extractor f(x;m<sub>f</sub>) takes a datapoint from two domains and creates a latent vector which is fed into a classifier c(.; m<sub>c</sub>). h(x; m<sub>f</sub>, m <sub>c</sub> ) = c(f (x; m<sub>f</sub> ); m<sub>c</sub> )
+- **Unsupervised Domain Adaptation** - Two distinctive domains : source <img class="eqn-inline" src="https://latex.codecogs.com/svg.latex?S&space;=&space;\{X_s,&space;Y_s\}"> and target domain <img class="eqn-inline" src="https://latex.codecogs.com/svg.latex?T&space;=&space;\{X_t\}"> where a feature extractor <img class="eqn-inline" src="https://latex.codecogs.com/svg.latex?f(x;&space;m_f)"> takes a datapoint from two domains and creates a latent vector which is fed into a classifier <img src="https://latex.codecogs.com/svg.latex?c(.;&space;m_c)" class="eqn-inline">. The combined equation is <img  class="eqn-outline" src="https://latex.codecogs.com/svg.latex?h(x;&space;m_f,&space;m_c)&space;=&space;c(f(x;&space;m_f);&space;m_c)">
+
 - **Adversarial Dropout** - Virtual Adversarial Dropout is used which maximize the divergence between two in-
-  dependent predictions to an input. The network h is decomposed into h<sub>l</sub> and h<sub>u</sub> by dropout m : h(x; m) = h<sub>u</sub> (m ⊙ h<sub>l</sub> (x)). The divergence between two distributions p and p' is D[p, p']≥ 0.
+  dependent predictions to an input. The network h is decomposed into <img class="eqn-inline" src="https://latex.codecogs.com/svg.latex?h_l"> and <img class="eqn-inline" src="https://latex.codecogs.com/svg.latex?h_u"> by dropout m : <img src="https://latex.codecogs.com/svg.latex?h(x;m)=h_u&space;(m&space;\odot&space;h_l&space;(x))" class="eqn-inline">. The divergence between two distributions p and p' is D[p, p']≥ 0.
 
-  - **Element wise** - The element-wise adv. dropout(EAdD) mask m<sup>adv</sup> is defined with respect to a schocastic dropout mask m<sup>s</sup> as : m<sup>adv</sup> = argmax<sub>m</sub> D [h(x; m<sup>s</sup> ), h(x; m)] where &#124;&#124;m<sup>s</sup> − m&#124;&#124; ≤ δ<sub>e</sub>L.
+  - **Element wise** - The element-wise adv. dropout(EAdD) mask m<sup>adv</sup> <img class="eqn-inline" src="https://latex.codecogs.com/svg.latex?m^{adv}"> is defined with respect to a schocastic dropout mask <img class="eqn-inline" src="https://latex.codecogs.com/svg.latex?m^s"> as : <img class="eqn-inline" src="https://latex.codecogs.com/svg.latex?m^{adv}&space;=&space;argmax_m\&space;D[h(x;&space;m^s),&space;h(x;&space;m)]"> where <img class="eqn-inline" src="https://latex.codecogs.com/svg.latex?||m^s&space;-&space;m||\leq&space;\delta_eL">.
 
-  - **Channel wise** - The channel adversarial droupout mask is defined as m<sup>adv</sup> = argmax<sub>m</sub> D [h(x; m<sup>s</sup> ), h(x; m)], where 1/HW ∑ &#124;&#124;m<sup>s</sup>(i) − m(i)&#124;&#124; ≤ δ<sub>c</sub> C and h<sub>l</sub>(x) ∈ R<sup>C×H×W</sup>, where C, H, and W denote the channel, height,
+  - **Channel wise** - The channel adversarial droupout mask is defined as <img class="eqn-inline" src="https://latex.codecogs.com/svg.latex?m^{adv}&space;=&space;argmax_m\&space;D [h(x; m^s ), h(x; m)]">, where <img class="eqn-inline" src="https://latex.codecogs.com/svg.latex?\frac{1}{HW}\sum&space;||m^s(i)&space;-&space;m(i)||&space;\leq&space;\delta_CC"> and <img class="eqn-inline" src="https://latex.codecogs.com/svg.latex?h_l(x)\&space;\epsilon R^{C&space;\times&space;H\times&space;W}">, where C, H, and W denote the channel, height,
     and width dimensions of the activation, respectively.
 
 - **Drop to Adapt** - The overall loss function is sum of the objectives for task-specific, domain adaptation, entropy minimization and Virtual Adversarial Training(VAT).
 
-  - _Task-specific objective_, L<sub>T</sub>(S) = - E<sub>x<sub>s</sub>, y<sub>s</sub><sub> ~ S</sub></sub>[y<sub>s</sub> <sup>T</sup> log h(x <sub>s</sub>)], where y<sub>s</sub> is one-hot encoded vector of y<sub>s</sub>.
+  - _Task-specific objective_, <img class="eqn-inline" src="https://latex.codecogs.com/svg.latex?L_T(S)&space;=&space;-&space;E_{x_{s},&space;y_{s}&space;\sim&space;S}[y_s^T&space;log\&space;h(x_s)]">, where  <img class="eqn-inline" src="https://latex.codecogs.com/svg.latex?y_s"> is one-hot encoded vector of  <img class="eqn-inline" src="https://latex.codecogs.com/svg.latex?y_s">.
 
-  - _Domain adaptation objective_, L<sub>DTA</sub>(T) = L<sub>fDTA</sub>(T) + L<sub>cDTA</sub>(T),
-    where L<sub>fDTA</sub>(T) = E<sub>x<sub>s</sub> ~ T </sub> [D<sub>KL</sub>[h(x<sub>t</sub>; m<sup>s</sup><sub>f</sub> ), &#124;&#124;h(x<sub>t</sub>; m<sup>adv</sup><sub>f</sub>)&#124;&#124;],
-    and L<sub>cDTA</sub>(T) = E<sub>x<sub>s</sub> ~ T </sub> [D<sub>KL</sub>[h(x<sub>t</sub>; m<sup>s</sup><sub>c</sub> ), &#124;&#124;h(x<sub>t</sub>; m<sup>adv</sup><sub>c</sub>)&#124;&#124;]
+  - _Domain adaptation objective_, <img class="eqn-inline" src="https://latex.codecogs.com/svg.latex?L_{DTA}(T)&space;=&space;L_{fDTA}(T)&space;&plus;&space;L_{cDTA}(T)">,
+    where <img class="eqn-inline" src="https://latex.codecogs.com/svg.latex?L_{fDTA}(T)&space;=&space;E_{x_{s}&space;\sim&space;T}\&space;[D_{KL}[h(x_t;&space;m^s_f&space;),&space;||h(x_t;&space;m^{adv}_f)||]">,
+    and <img class="eqn-inline" src="https://latex.codecogs.com/svg.latex?L_{cDTA}(T)&space;=&space;E_{x_{s}&space;\sim&space;T}\&space;[D_{KL}[h(x_t;&space;m^s_c&space;),&space;||h(x_t;&space;m^{adv}_c)||]">
 
-  - _Entropy minimization objective_, L<sub>E</sub>(T) = - E<sub>x<sub>t</sub><sub> ~ S</sub></sub>[h(x <sub>t</sub>) <sup>T</sup> log h(x <sub>t</sub>)]
+  - _Entropy minimization objective_, <img class="eqn-inline" src="https://latex.codecogs.com/svg.latex?L_E(T)&space;=&space;E_{x_{t}&space;\sim&space;S}\&space;[h(x_t)^T\&space;log\&space;h(x_t)]">
 
-  - _VAT objective_, L<sub>V</sub>(T) = E<sub>x<sub>t</sub> ~ T </sub> [max<sub>&#124;&#124;r&#124;&#124; ≤ ∈ </sub> D<sub>KL</sub>[h(x<sub>t</sub>), &#124;&#124;h(x<sub>t</sub> + r)&#124;&#124;]
+  - _VAT objective_, <img class="eqn-inline" src="https://latex.codecogs.com/svg.latex?L_V(T)&space;=&space;E_{x_{t}&space;\sim&space;T}&space;[max_{||r||&space;\leq&space;\epsilon&space;}&space;D_{KL}[h(x_t),&space;||h(x_t&space;&plus;&space;r)||]">
 
 ## Experiment Result
 

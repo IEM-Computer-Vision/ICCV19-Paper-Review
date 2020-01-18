@@ -1,0 +1,12 @@
+<!-- NAVBAR -->
+<div class="outer" id="navbar_wrap">
+  <nav class="inner">
+    <ul>
+      {% for item in site.data.pages %}
+      <li>
+        <a href="{{item.url}}">{{item.title}}</a>
+      </li>
+      {% endfor %}
+    </ul>
+  </nav>
+</div>

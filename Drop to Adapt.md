@@ -8,10 +8,7 @@ In this paper, unsupervised domain adaptation id dealt with domain adversarial t
 
 ## Proposed Method
 
-- **Unsupervised Domain Adaptation** - Two distinctive domains : source <img class="eqn-inline" src="https://latex.codecogs.com/svg.latex?S&space;=&space;\{X_s,&space;Y_s\}"> and target domain <img class="eqn-inline" src="https://latex.codecogs.com/svg.latex?T&space;=&space;\{X_t\}"> where a feature extractor <img class="eqn-inline" src="https://latex.codecogs.com/svg.latex?f(x;&space;m_f)"> takes a datapoint from two domains and creates a latent vector which is fed into a classifier <img src="https://latex.codecogs.com/svg.latex?c(.;&space;m_c)" class="eqn-inline">. 
-<div align="center">
-<img  class="eqn-outline" src="https://latex.codecogs.com/svg.latex?h(x;&space;m_f,&space;m_c)&space;=&space;c(f(x;&space;m_f);&space;m_c)">
-</div>
+- **Unsupervised Domain Adaptation** - Two distinctive domains : source <img class="eqn-inline" src="https://latex.codecogs.com/svg.latex?S&space;=&space;\{X_s,&space;Y_s\}"> and target domain <img class="eqn-inline" src="https://latex.codecogs.com/svg.latex?T&space;=&space;\{X_t\}"> where a feature extractor <img class="eqn-inline" src="https://latex.codecogs.com/svg.latex?f(x;&space;m_f)"> takes a datapoint from two domains and creates a latent vector which is fed into a classifier <img src="https://latex.codecogs.com/svg.latex?c(.;&space;m_c)" class="eqn-inline">. The combined equation is <img  class="eqn-outline" src="https://latex.codecogs.com/svg.latex?h(x;&space;m_f,&space;m_c)&space;=&space;c(f(x;&space;m_f);&space;m_c)">
 
 - **Adversarial Dropout** - Virtual Adversarial Dropout is used which maximize the divergence between two in-
   dependent predictions to an input. The network h is decomposed into <img class="eqn-inline" src="https://latex.codecogs.com/svg.latex?h_l"> and <img class="eqn-inline" src="https://latex.codecogs.com/svg.latex?h_u"> by dropout m : <img src="https://latex.codecogs.com/svg.latex?h(x;m)=h_u&space;(m&space;\odot&space;h_l&space;(x))" class="eqn-inline">. The divergence between two distributions p and p' is D[p, p']≥ 0.

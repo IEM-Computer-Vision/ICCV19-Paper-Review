@@ -40,14 +40,16 @@ in decoder respectively to compute the the <img class="eqn-inline" src="https://
   <img class="eqn-inline" src="https://latex.codecogs.com/svg.latex?L_c = \sum_{y\in M}&space;||CSA&space;(I_i_p)_y-&space;\Phi_n(I_g_t)_y||^2 _2&space; + ||CSA_d&space;(I_i_p)_y-&space;\Phi_n(I_g_t)_y||^2 _2">
 
 - **Feature Path Discriminator** -  A feature patch discriminator is developed to discriminate completed images and original images by inspecting their feature maps. As receptive fields of each point features the entire image, the adversarial loss <img class="eqn-inline" src="https://latex.codecogs.com/svg.latex? D_R">,
-<img class="eqn-inline" src="https://latex.codecogs.com/svg.latex?D_R&space;=&space;-E_{I_g_t}[D(I_g_t ,&space; I_r)^2]-E_{I_r}[(1-D(I_g_t ,&space; I_r)^2)] ">  & Loss function <img class="eqn-inline" src="https://latex.codecogs.com/svg.latex? D_F"> for discriminators:
-<img class="eqn-inline" src="https://latex.codecogs.com/svg.latex? D_F =&space;-E_{I_g_t}[(1-D(I_g_t ,&space; I_r)^2)]-E_{I_r}[D(I_g_t ,&space; I_r)^2]"> where <img class="eqn-inline" src="https://latex.codecogs.com/svg.latex? E_{I_g_t}/E_{T_r}">, represents the operation of taking average for all real/fake data in the mini-batch.
+
+   <img class="eqn-inline" src="https://latex.codecogs.com/svg.latex?D_R&space;=&space;-E_{I_g_t}[D(I_g_t ,&space; I_r)^2]-E_{I_r}[(1-D(I_g_t ,&space; I_r)^2)] ">  & Loss function <img class="eqn-inline" src="https://latex.codecogs.com/svg.latex? D_F"> for discriminators:
+
+  <img class="eqn-inline" src="https://latex.codecogs.com/svg.latex? D_F =&space;-E_{I_g_t}[(1-D(I_g_t ,&space; I_r)^2)]-E_{I_r}[D(I_g_t ,&space; I_r)^2]"> where <img class="eqn-inline" src="https://latex.codecogs.com/svg.latex? E_{I_g_t}/E_{T_r}  &space;">, represents the operation of taking average for all real/fake data in the mini-batch.
 
 
 ## Experimental Results
   - On three datasets this model was tested **Places2** , **CelebA**,and **Paris StreetView** model is optimized by the **Adam algorithm**
     with a learning rate of 2 × 10−4 and <img class="eqn-inline" src="https://latex.codecogs.com/svg.latex? \beta _1"> = 0.5. The tradeoff
-    parameters are set as <img class="eqn-inline" src="https://latex.codecogs.com/svg.latex?\lambda _r"> =1,<img class="eqn-inline" src="https://latex.codecogs.com/svg.latex?\lambda _c">=0.01, <img class="eqn-inline" src="https://latex.codecogs.com/svg.latex?\lambda _d">=0.002,with a batch size of 1.The weak correlation areas in attention maps are areas of concern for generated patches which are far from it, the strong correlation areas are areas of concern for both adjacent generated patches and most relevant patches.    
+    parameters are set as <img class="eqn-inline" src="https://latex.codecogs.com/svg.latex?\lambda _r"> = 1,<img class="eqn-inline" src="https://latex.codecogs.com/svg.latex?\lambda _c"> = 0.01, <img class="eqn-inline" src="https://latex.codecogs.com/svg.latex?\lambda _d"> = 0.002,with a batch size of 1.The weak correlation areas in attention maps are areas of concern for generated patches which are far from it, the strong correlation areas are areas of concern for both adjacent generated patches and most relevant patches.    
   
   <div align="center">
   <div>Qualitative comparison</div>

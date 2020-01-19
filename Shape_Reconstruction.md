@@ -29,7 +29,7 @@ is then passed to the projection operator Silhouette Projection (TS) along with 
 
 
 <p align = "center">
-<img src="master/images/Untitled.png" />
+<img src="images/Untitled.png" />
 </p>
 
 * Shape-from-Depth Images 3D Reconstruction : It is same as above but here we are using Depth Image Projection (TD) inplace of Silhouette Projection (TS). In this reconstruction ability depends on gussian noise as well as number of views avaliable.

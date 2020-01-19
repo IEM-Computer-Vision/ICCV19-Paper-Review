@@ -1,7 +1,7 @@
 # Face-to-Parameter Translation for Game Character Auto-Creation
 
 <p align = "center">
-<img src="images/game_character_overview.png" width="500" />
+<img src="./images/game_character_overview.png" width="500" />
 </p>
 
 **Character customization** system is an important component in *Role-Playing Games(RPGs)*, where players are allowed to edit the facial appearance of their in-game characters with their own preferences rather than using default templates.
@@ -25,7 +25,7 @@ This paper proposes a method of automatically creating in-game characters of pla
 **Related Works:** Neural Style Transfer, Monocular 3D face reconstruction, Generative Adversarial Network.
 
 <p align = "center">
-<img src="images/game_character_details.png" width="700" />
+<img src="./images/game_character_details.png" width="700" />
 </p>
 
 ## Proposed Model v/s other Models
@@ -35,7 +35,7 @@ This paper proposes a method of automatically creating in-game characters of pla
 * Popular monocular 3D face reconstruction method, namely 3DMM-CNN can only generate masks with similar facial outlines, whereas auto-created game characters by the proposed model have a higher similarity with the inputs.
 
 <p align = "center">
-<img src="images/game_char_comparision.png" width="700" />
+<img src="./images/game_char_comparision.png" width="700" />
 </p>
 
 Not related to real photos, the proposed method can also generate game characters from artistic portraits, including the sketched image and caricature.

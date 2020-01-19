@@ -19,7 +19,7 @@ As the following camera pose estimation from a scene coordinate map is a well-be
 - Predicting Scene Coordinate
 -	Query Pose Estimation
 <p allign = "Center">
-<img src="/images/Figure%201%20Pipeline%20of%20The%20system.png" />
+<img src="https://iem-computer-vision.github.io/ICCV19-Paper-Review/images/Figure%201%20Pipeline%20of%20The%20system.png" />
 </p>
 Figure 1: Pipeline of Their system. The top branch constructs the scene pyramid, while the bottom branch redict a scene.
 coordinate map for the query image.
@@ -30,7 +30,7 @@ Each training sample consists of 5 scene frames for building scene pyramid, and 
 Their network is implemented with PyTorch, and trained on 1080Ti with 11G memory
 
 <p allign = "Center">
-<img src="/images/Figure%204.png" />
+<img src="https://iem-computer-vision.github.io/ICCV19-Paper-Review/images/Figure%204.png" />
 </p>
 Figure 4: Percentage of predicted camera poses falling within the threshold of (5cm, 5cm) on 7Scenes indoor dataset by RF1, RF2, DSAC++, DSAC, InLoc, and their approaches.<br>
 
@@ -42,13 +42,13 @@ They report the accuracy of the estimated camera pose in Figure 4 and that of th
 
 
 <p allign = "Center">
-<img src="/images/Figure%206%20Cumulative%20Distribution.png" />
+<img src="https://iem-computer-vision.github.io/ICCV19-Paper-Review/images/Figure%206%20Cumulative%20Distribution.png" />
 </p>
 Figure 6: Cumulative Distribution Function of scene coordinate error compared with InLoc, DSAC and DSAC++ on 7Scenes.<br>
 
 
 <p allign = "Center">
-<img src="/images/Figure 7.png" />
+<img src="https://iem-computer-vision.github.io/ICCV19-Paper-Review/images/Figure 7.png" />
 </p>
 Figure 7: (a) A pixel Que in the query image is marked in Green. (b) The ground truth corresponding pixel Pos in a scene reference image is marked in Red, while a randomly selected pixel Neg is marked in Blue. (c) Two sets of scene reference features from Experiment-1 are projected in 2D space by PCA. (d) Four channels (i.e., the ith channels) of scene reference features from Experiment-2 are plotted w.r.t. a 1m × 1m × 1m cube, where dark-blue stands for high channel activation.<br>
 

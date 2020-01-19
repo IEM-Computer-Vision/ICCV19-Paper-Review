@@ -2,12 +2,14 @@ from bs4 import BeautifulSoup
 import requests
 import re
 
+# Total Papers available on the website = 1075
+
 paper_url = "http://openaccess.thecvf.com/ICCV2019.py"
 domain = "http://openaccess.thecvf.com/"
 
 review_domain = "https://{{site.github.owner_name}}.github.io/ICCV19-Paper-Review/"
 
-paper_data = {} # {'title' : 'pdf link'}
+paper_data = {} # {'title' : ('pdf link', 'review link')}
 
 paper_index_start = 13
 papers_todo = 10
@@ -18,12 +20,6 @@ soup = BeautifulSoup(response.text, 'html.parser')
 
 titlebox = soup.findAll('dt', attrs={'class': 'ptitle'})
 dd_box = soup.findAll('dd')
-
-# firstTitle = titlebox[0].find('a')
-# print(firstTitle.contents[0])
-
-
-# print(domain + dd_box[1].find('a')['href'])
 
 pdfBox_index = 1
 
@@ -37,9 +33,6 @@ for titleboxes in titlebox:
 
     paper_data[title] = (pdf_link, review_link) # Add data to dictionary    
     pdfBox_index += 2
-
-
-# print(paper_data)
 
 # Generate review paper markdown files and Update Readme
 

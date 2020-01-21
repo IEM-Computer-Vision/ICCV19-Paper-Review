@@ -28,7 +28,7 @@ Figure 1. Document image unwarping. Top row: input images. Middle row: predicted
 ## How DewarpNet works?
 DewarpNet, as shown in Fig. 2, consists of two sub- networks for learning unwarping: the shape network and the texture mapping network. Additionally, a post-processing refinement module for illumination effect adjustment  visually improves the unwarped images.The training process has two phases. In the first phase, the shape network and the texture mapping network are trained separately for initialization. In the second phase, the two sub-networks are trained jointly to improve the unwarping result.They train the models on the Doc3D dataset of 100,000 images, splitting into training and validation sets such that they have no meshes in common. In the first phase of initialization training, the texture mapping network takes the ground truth 3D coordinate map C as input. Later, in the second phase of joint training, each sub-network is initialized with the best separately trained models.
 <p allign = "Center">
-<img src="./images/Dewarpnet_Fig2.jpg"/>
+<img src="./images/DewarpNet_Fig2.jpg"/>
 </p>
 Figure 2. DewarpNet Framework. I is the input deformed document image. Ic is the I in checkerboard pattern texture. Training Flow is in black lines. The two black dashed lines refer to the predicted (Dˆ) and ground-truth (D) unwarped reconstruction patterns. Testing flow is in red dashed lines. Triangles denote the losses . C and B are the ground-truth for the 3D coordinates and the backward mapping respectively.
 

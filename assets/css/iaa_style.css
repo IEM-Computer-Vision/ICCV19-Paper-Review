@@ -1,0 +1,52 @@
+#navbar_wrap nav {
+  height: 40px;
+}
+
+#navbar_wrap nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#navbar_wrap nav ul li {
+  height: 40px;
+  display: inline-block;
+}
+
+#navbar_wrap nav ul li a {
+  display: inline-block;
+  padding: 0.5em;
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+}
+
+#navbar_wrap nav ul li:hover {
+  background-color: #111;
+}
+
+.eqn-inline.img {
+  padding: 0px 5px !important;
+  box-shadow: none !important;
+  margin: 5px 0px 0px !important;
+  border: none !important;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  -o-box-shadow: none !important;
+  -ms-box-shadow: none !important;
+}
+
+.eqn-outline.img {
+  box-shadow: none !important;
+  margin: 5px auto 0px !important;
+  border: none !important;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  -o-box-shadow: none !important;
+  -ms-box-shadow: none !important;
+}
+
+#main_content.inner {
+  max-width: 900px;
+}
+/*# sourceMappingURL=iaa_style.css.map */

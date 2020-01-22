@@ -10,13 +10,15 @@ Adversarial attacks raise security concerns about the robustness of DNNs in extr
 * This framework can be applied to both score-based (the attacker to have access to a vector of assessment scores for all output candidates, called, soft labels) and decision based settings (the attacker has access to the system’s final decision on the most probable output, called, hard labels).
 * Finally, they demonstrated the efficiency of the framework on a variety of real-world image classification datasets such as MNIST, CIFAR-10 and ImageNet. 
 ## Evaluation:
+
 <p>
   <img src="https://github.com/shatadru99/ICCV19-Paper-Review/blob/name-paper_reviews/images/BlackBox_FrameWork_Results.JPG">
 </p>
+
 <p>
   <img src="https://github.com/shatadru99/ICCV19-Paper-Review/blob/name-paper_reviews/images/table.JPG">
 </p>
-(These values are obtained for certain near-optimal values of various internal parameters). <br> The empirical results consistently show that this framework performs competitively to existing works in terms of the attack success rate while achieving a significant reduction on the query complexity. <br>
-```
-Code for this paper is available [here](https://github.com/LinLabNEU/Blackbox_ADMM).
-```
+
+(These values are obtained for certain near-optimal values of various internal parameters). </br> The empirical results consistently show that this framework performs competitively to existing works in terms of the attack success rate while achieving a significant reduction on the query complexity. </br>
+
+>Code for this paper is available [here](https://github.com/LinLabNEU/Blackbox_ADMM).

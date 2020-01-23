@@ -35,6 +35,8 @@ In order to make a clearer study of the impact of the HSLE model on the overall 
 <p allign = "center">
 <img src="./images/FacialLandmarkDetection_Fig2.png" />
 </p>
-Figure 2: Qualitative results on the 300W. Images with green borders (row 1) are results derived from a baseline model directly. Images with blue borders (row 2) are results derived from our HSLE model. Images with yellow borders (row 3) and images with gray borders (row 4) are local enlarged image patches from the baseline and ours respectively. BLUE curves and RED dots are predictions. GREEN curves are ground truth.<br>
+Figure 2: Qualitative results on the 300W. Images with green borders (row 1) are results derived from a baseline model directly. Images with blue borders (row 2) are results derived from our HSLE model. Images with yellow borders (row 3) and images with gray borders (row 4) are local enlarged image patches from the baseline and ours respectively. BLUE curves and RED dots are predictions. GREEN curves are ground truth.
+
+
 <p>So, In this paper, a Hierarchical Structured Landmark Ensemble (HSLE) model is resented for learning robust facial landmark detection. Due to the structural constraints propagated
 from the HSLE, the baseline facial landmark detectors consistently become more robust by trained jointly with the HSLE in an end-to-end fashion. The effectiveness of this idea has been verified by extensive experiments, indicates that facial landmark detection can be more robust via learning from hierarchical structural constraints.</p>

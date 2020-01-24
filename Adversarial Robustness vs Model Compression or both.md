@@ -14,9 +14,9 @@ Reviewed by [Shatadru Majumdar](https://www.linkedin.com/in/shatadru-majumdar-ab
 * Two previous important hypothesis on weight pruning which are explored in this paper:
   1. The lottery ticket hypothesis as mentioned in this [paper](https://arxiv.org/abs/1803.03635) states that dense, randomly-initialized, feed-forward networks contain subnetworks (winning tickets) that when trained in isolation — reach test accuracy comparable to the original network in a similar number of iterations. The original initilizaiton of the sub-network (before the large network pruning) is needed for it to achieve competitive performance when trained in isolation.
   2. This [paper](https://arxiv.org/abs/1810.05270) implies that: 
-    * training a large, over-parameterized model is often not necessary to obtain an efficient final model
-    * learned “important” weights of the large model are typically not useful for the small pruned model
-    * the pruned architecture itself, rather than a set of inherited “important” weights, is more crucial to the efficiency in the final model.
+      * training a large, over-parameterized model is often not necessary to obtain an efficient final model
+      * learned “important” weights of the large model are typically not useful for the small pruned model
+      * the pruned architecture itself, rather than a set of inherited “important” weights, is more crucial to the efficiency in the final model.
 ## This paper's contribution:
 * They built a framework that achieves both adversarial robustness and model compression through implementing concurrent weight pruning and adversarial training.
 * They used the ADMM (alternating direction method of multipliers) based pruning in their framework due to its compatibility with adversarial training and that it supports both irregular pruning and different kinds of regular pruning.

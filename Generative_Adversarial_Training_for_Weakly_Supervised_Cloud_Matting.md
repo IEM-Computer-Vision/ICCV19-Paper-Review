@@ -25,7 +25,7 @@ The amount of energy ![\varepsilon](https://latex.codecogs.com/svg.latex?\vareps
 
 - **Architecture** - The generator *G* consists of an eight-layer encoder and an eight-layer decoder. Skip connections are added between all channels at layer *i* and layer *n-1*, as of U-Net. The discriminator D is a standard Conv-Net with 10 convolutional layers followed by 2 fully-connected layers. The matting network *F* has similar configuration as of *G* , but different no. of layers and filters.   
 
-- **Saturation penalty** - To improve training stability, an additional saturation penalty term is added to objective of G, ![sigma](https://latex.codecogs.com/svg.latex?\mu(s)=\gamma||s||_2^2), where *s = (max(r,g,b) - min(r,g,b)) / max(r,g,b)*. 
+- **Saturation penalty** - To improve training stability, an additional saturation penalty term is added to objective of G, ![sigma](https://latex.codecogs.com/svg.latex?\mu(s)=\gamma\left \| s \right \|_2^2), where *s = (max(r,g,b) - min(r,g,b)) / max(r,g,b)*. 
 
 - **Training details** - The Batch-normalization and ReLU activation function are embedded in G, D and F after all convolution layers, except for their outputs. For the last layer of G and D, the sigmoid function to convert the output logits to probabilities is used. The weight for saturation penalty as *γ* = 1.0 is set and the Adam optimizer for training with batch_size=4 is used. Xavier initialization is used for all networks. 
 

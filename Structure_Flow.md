@@ -50,4 +50,4 @@ They implement a human subjective study on the Amazon Mechanical Turk (MTurk). T
   <img width="360"height="220" src="https://iem-computer-vision.github.io/ICCV19-Paper-Review/images/Structure_flow_table2.jpg">
  </p>
 
-* Reviewed by [Soumtadip Sarkar](https://www.linkedin.com/in/soumyadip-sarkar-173901183/)
+* Reviewed by [Soumyadip Sarkar](https://www.linkedin.com/in/soumyadip-sarkar-173901183/)

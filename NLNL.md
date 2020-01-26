@@ -8,7 +8,7 @@
 *	Negative  Learning is introduced to resolve the problem of noisy data classification and to save the model from overfitting. In Negative Learning CNNs are trained using a complimentary label as in "input image does not belong to this complimentary label" which furthermore helps to improve convergence.
 
 <p align="center">
-  <img width="460" height="300" src="https://github.com/soumya997/Bisection_method_in_c/blob/master/instance.png">
+  <img width="360" height="220" src="https://iem-computer-vision.github.io/ICCV19-Paper-Review/images/instance.png">
 </p>
  
   **Figure 1:** Given the noisy label:car, PL classifies that as a car (Red balloon) which is wrong,on the other hand NL classifies that as not a bird(Blue balloon) which is somehow right.
@@ -26,16 +26,19 @@ A set of experiments had been conducted in different experiment settings like-di
 #### Table 1: 
 Shows the performance of their model in all cases, from CNN architecture, dataset, noise type, or noise ratio. Their models outperform other models by a maximum of 5%, but their model fails to converge when symm-exc noise is 80%.
  
- ![table3.png](https://github.com/soumya997/Bisection_method_in_c/blob/master/table3.png)
+ ![table3.png](https://iem-computer-vision.github.io/ICCV19-Paper-Review/images/table3.png)
 #### Table 2: 
 : Table 4 shows the comparison of the produced results between the method proposed in Tanaka et al. [30] and their method, which goes to their fever as the hyper-parameters do not vary according to noise type and ratio.
-![table4.png](https://github.com/soumya997/Bisection_method_in_c/blob/master/table4.png)
+![table4.png](https://iem-computer-vision.github.io/ICCV19-Paper-Review/images/table4.png)
 
 
 #### Table 3 and 4: 
 Tables 3 and 4 are taken from [22] and [2], respectively. While Table 3 adopted the structure of LeNet5 for MNIST, Table 4 used a 2-layer fully connected network for MNIST and a 14-layer ResNet for CIFAR10. Both tables show the proposed method surpassed most of the other comparable results for all CNN architectures, datasets, noise types, and ratios. In some cases, the performance of the proposed method exceeded those of other methods by up to 4∼5%, demonstrating the superiority of our method. The proposed method only performed second best for 60% asymmetric noise in Table 4, but we believe this is unimportant because such a scenario is unrealistic.     
-![table5.png](https://github.com/soumya997/Bisection_method_in_c/blob/master/table5.png)
-![table6.png](https://github.com/soumya997/Bisection_method_in_c/blob/master/table6.png)
+
+![table5.png](https://iem-computer-vision.github.io/ICCV19-Paper-Review/images/table5.png)
+![table6.png](https://iem-computer-vision.github.io/ICCV19-Paper-Review/images/table6.png)
+
+
 As a conclusion it is clear that their Semi-supervised Learning model achieves state-of-the-art results based on their SelNLPL framework and their attempt to resolve the issue of the existence of noisy labels and inaccurate labels in classification task goes well. 
 >Code of the paper can be found in this [Github repo.](https://github.com/ydkim1293/NLNL-Negative-Learning-for-Noisy-Labels)
  

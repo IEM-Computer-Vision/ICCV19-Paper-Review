@@ -45,4 +45,4 @@ In the Spatial deprojection for Face images, they compared their model with LMMS
    In spatial deprojection for the walking video category, they done a  qualitative evaluation of their method of reconstructing human gait videos from vertical spatial projections. This scenario is of practical relevance for corner cameras. In this category, they used their own customized dataset of 35 videos of 30 subjects(more details are provided in the paper).
     In the temporal deprojection with moving MNIST category, excluded LMMSE in this experiment. Similar to the ﬁrst experiment, this results in DET outputs having the best-expected signal (deprojection) PSNR only for k = 1. Our method clearly outperforms DET in signal PSNR for k > 1. DET performs better in projection PSNR since in this experiment an average of all plausible sequences yields a very accurate projection.
     
-* Reviewed by [Soumtadip Sarkar](https://www.linkedin.com/in/soumyadip-sarkar-173901183/)
+* Reviewed by [Soumyadip Sarkar](https://www.linkedin.com/in/soumyadip-sarkar-173901183/)

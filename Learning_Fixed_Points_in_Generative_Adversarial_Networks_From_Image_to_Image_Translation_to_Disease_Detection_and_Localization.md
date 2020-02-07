@@ -19,15 +19,19 @@ The new training scheme offers three advantages.(1) reinforced same-domain trans
 </div>
 
 **Adversarial Loss** - The generator learns the cross- and same-domain translations. The revised adversarial loss :
+
 <img class="eqn-outline" src="https://latex.codecogs.com/svg.latex?L_{adv}=\sum_{c\ \epsilon\ \{ c_x, c_y\}} E_{x, c} [log(1 - D_{real/fake}(G(x,c)))] + E_x[log\ D_{real/fake}(x)]">
 
 **Domain Classification Loss** - The domain classification loss for the generator to account for both same- and cross-domain translations, ensuring that the generated image is from the correct domain in both scenarios:
+
 <img class="eqn-outline" src="https://private.codecogs.com/svg.latex?L_%7Bdomain%7D%5Ef%20%5Csum_%7Bc%5C%20%5Cepsilon%5C%20c_x%2C%20c_y%7D%20E_%7Bx%2C%20c%7D%20%5B-log%5C%20D_%7Bdomain%7D%28c%7CG%28x%2Cc%29%29%29%5D">
 
 **Cycle Consistency Loss** - The modified cycle consistency loss ensures that both cross- and same-domain translations are cycle consistent.
+
 <img class="eqn-outline" src="https://private.codecogs.com/svg.latex?L_%7Bcyc%7D%20%3D%20E_%7Bx%2C%20c_x%2C%20c_y%7D%5B%5Cleft%20%5C%7C%20G%28G%28x%2Cc_y%29%2C%20c_x%29%20-%20x%20%5Cright%20%5C%7C_1%5D%20&plus;%20E_%7Bx%2C%20c_x%7D%5B%5Cleft%20%5C%7C%20G%28G%28x%2Cc_x%29%2C%20c_x%29%20-%20x%20%5Cright%20%5C%7C_1">
 
 **Conditional Identity Loss** - The generator is forced using conditional identity loss to preserve the domain identity while translating the image to the source domain and helps the generator learn a minimal transformation for translating the input image to the target domain.
+
 <img class="eqn-outline" src="https://private.codecogs.com/svg.latex?L_%7Bid%7D%20%3D%20%5Cbegin%7Bcases%7D%20%26%200%2C%20c%3Dc_y%20%5C%5C%20%26%20E_%7Bx%2C%20c%7D%5B%5Cleft%20%5C%7C%20G%28x%2Cc%29%20-%20x%20%5Cright%20%5C%7C_1%2C%20c%3Dc_x%20%5Cend%7Bcases%7D">
 
 **Full Objective** - Combining all losses, the final full objective function for the discriminator and generator

@@ -31,10 +31,13 @@ Shows the performance of their model in all cases, from CNN architecture, datase
 : Table 4 shows the comparison of the produced results between the method proposed in Tanaka et al. [30] and their method, which goes to their fever as the hyper-parameters do not vary according to noise type and ratio.
 ![table4.png](https://iem-computer-vision.github.io/ICCV19-Paper-Review/images/table4.png)
 
+
 #### Table 3 and 4: 
 Tables 3 and 4 are taken from [22] and [2], respectively. While Table 3 adopted the structure of LeNet5 for MNIST, Table 4 used a 2-layer fully connected network for MNIST and a 14-layer ResNet for CIFAR10. Both tables show the proposed method surpassed most of the other comparable results for all CNN architectures, datasets, noise types, and ratios. In some cases, the performance of the proposed method exceeded those of other methods by up to 4∼5%, demonstrating the superiority of our method. The proposed method only performed second best for 60% asymmetric noise in Table 4, but we believe this is unimportant because such a scenario is unrealistic.     
+
 ![table5.png](https://iem-computer-vision.github.io/ICCV19-Paper-Review/images/table5.png)
 ![table6.png](https://iem-computer-vision.github.io/ICCV19-Paper-Review/images/table6.png)
+
 
 As a conclusion it is clear that their Semi-supervised Learning model achieves state-of-the-art results based on their SelNLPL framework and their attempt to resolve the issue of the existence of noisy labels and inaccurate labels in classification task goes well. 
 >Code of the paper can be found in this [Github repo.](https://github.com/ydkim1293/NLNL-Negative-Learning-for-Noisy-Labels)

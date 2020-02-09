@@ -1,6 +1,7 @@
 # ICCV19-Paper-Review
 
-Paper Reviews for all papers of ICCV 2019
+<img src="http://iccv2019.thecvf.com/images/ICCV19logo_main.png" width="30" height = "20">
+Reviewing the top 25 papers of [International Conference on Computer Vision 2019](http://iccv2019.thecvf.com/).
 
 | Paper Name  | PDF Link | Review Link  | Review Author |
 |---|---|---|---|

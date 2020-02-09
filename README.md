@@ -1,5 +1,11 @@
 # ICCV19-Paper-Review
 
+[![HitCount](http://hits.dwyl.io/IEM-Computer-Vision/badges.svg)](http://hits.dwyl.io/IEM-Computer-Vision/badges)
+[![made-with-Markdown](https://img.shields.io/badge/Made%20with-Markdown-1f425f.svg)](http://commonmark.org)
+[![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/Naereen/StrapDown.js/blob/master/LICENSE)
+[![GitHub stars](https://img.shields.io/github/stars/IEM-Computer-Vision/ICCV19-Paper-Review.svg?style=social&label=Star&maxAge=2592000)](https://GitHub.com/IEM-Computer-Vision/ICCV19-Paper-Review/stargazers/)
+[![GitHub contributors](https://img.shields.io/github/contributors/IEM-Computer-Vision/ICCV19-Paper-Review.svg)](https://GitHub.com/IEM-Computer-Vision/ICCV19-Paper-Review/graphs/contributors/)
+
 <img src="http://iccv2019.thecvf.com/images/ICCV19logo_main.png" width="600" height = "200">
 <h3>Reviewing the top 25 papers of <a href="http://iccv2019.thecvf.com">International Conference on Computer Vision 2019</a></h3>
 

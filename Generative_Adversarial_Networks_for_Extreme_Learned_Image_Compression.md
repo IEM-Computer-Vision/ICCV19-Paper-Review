@@ -15,10 +15,9 @@ preserving texture and global structure.
 
 This paper propose a principled GAN framework for full-resolution image compression and use it to realize an extreme image compression system, targeting bitrates
 below 0.1bpp.In this framework, we consider two modes of operation :
-* Generative Compression (GC) : preserving the overall image content while generating structure of different scales such as leaves of trees
-  or windows in the facade of buildings.
-* Selective Generative Compression (SC)  completely generating parts of the image from a semantic label map while preserving user-defined 
-  regions with a high degree of detail.
+* Generative Compression (GC) : preserving the overall image content while generating structure of different scales such as leaves of trees or windows in the facade of buildings.
+* Selective Generative Compression (SC)  completely generating parts of the image from a semantic label map while preserving user-defined regions with a high degree of detail.
+
 This framework combines an encoder, decoder/generator and a multi-scale discriminator, which we train jointly for a generative 
 learned compression objective. The model synthesizes details it cannot afford to store, obtaining visually pleasing results at bitrates 
 where previous methods fail and show strong artifacts. 
